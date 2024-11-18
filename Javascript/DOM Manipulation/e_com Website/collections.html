@@ -4,35 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
-    <style>
-        .search{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #searchInputBox{
-            margin: 10px;
-            padding: 10px;
-            width: 400px;
-        }
-        .products_display{
-            display: flex;
-            gap: 10px;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .products_img{
-            width: 200px;
-            height: 200px;
-        }
-        .noDataFound{
-            display: none;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="search">
@@ -42,42 +14,42 @@
         
         <div class="products_display" id="products_display">
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/Color-Car.jpg" alt="products_img" class="products_img">
                 <p>White Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/new_arrival_images.jfif" alt="products_img" class="products_img">
                 <p>Black Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/Color-Gadgets.jpg" alt="products_img" class="products_img">
                 <p>Blue Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/new_arrival_images.jfif" alt="products_img" class="products_img">
                 <p>Black Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/Color-Gadgets.jpg" alt="products_img" class="products_img">
                 <p>White Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/Color-Car.jpg" alt="products_img" class="products_img">
                 <p>Blue Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/new_arrival_images.jfif" alt="products_img" class="products_img">
                 <p>Brown Shirt</p>
             </div>
 
             <div class="products_box">
-                <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" alt="products_img" class="products_img">
+                <img src="/Javascript/img/Color-Gadgets.jpg" alt="products_img" class="products_img">
                 <p>Black Shirt</p>
             </div>
         </div>
@@ -102,7 +74,6 @@
 
         var enteredValue = event.target.value.toUpperCase()
 
-        console.log(enteredValue)
         let filteredCount = 0
 
         // console.log(products_list[0].querySelector("p").textContent)
@@ -112,13 +83,11 @@
             var productname=products_list[count].querySelector("p").textContent
 
             if(productname.toUpperCase().indexOf(enteredValue)<0){
-                
                 products_list[count].style.display="none"
-
             }
             else{
                 products_list[count].style.display="block"
-                filteredCount=filteredCount+1
+                filteredCount++
             }
         }
 
