@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sign-In</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Google</h3>
+        </div>
+        <div class="sign_in">
+            <p>Sign In</p>
+            <div class="inputField">
+                <input type="text" name="email_value" class="email_value" required>
+                <label for="email_value" class="email_label">Email or phone</label>
+            </div>
+            <div class="inputField">
+                <input type="password" name="password_value" class="password_value" required>
+                <label for="password_value" class="password_label">Enter Your Password</label>
+            </div>
+            <div class="show_password_checkbox">
+                <input type="checkbox" onclick="handlePassword()" class="show_password">
+                <label for="show_password" class="show_password_label">Show Password</label>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="#">Forget password ?</a>
+            <button class="next_btn">Next</button>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

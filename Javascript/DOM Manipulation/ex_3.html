@@ -1,0 +1,54 @@
+<h1>Guess the Number from 1 to 10</h1>
+
+<input type="number" name="num" id="num">
+<button onclick="check()">Check</button>
+
+<p id="ans">You are Wrong/Right</p>
+
+<p id="sco">You score : 0</p>
+
+<p id="chance">Your chances : 10</p>
+
+<script>
+    var score=0;
+    var chances=10;
+    var ans = document.getElementById("ans")
+    var sco = document.getElementById("sco")
+    var num = document.getElementById("num")
+    var chance = document.getElementById("chance")
+
+    function check(){
+        var enterredNumber = num.value
+        var randomNumber = Math.floor(Math.random()*10)
+        console.log(chances)
+        if(chances!=0)
+        {
+            if(enterredNumber == randomNumber)
+            {
+                console.log(enterredNumber,randomNumber)
+                console.log("Right");
+                ans.textContent="You are Right"    
+                sco.textContent=`Your score is ${score}`  
+                chance.textContent=`Your chance is ${chances}`   
+                score++    
+            }
+        else
+            {         
+                console.log(enterredNumber,randomNumber)
+                console.log("Wrong");
+                ans.textContent="You are Wrong"
+                sco.textContent=`Your score is ${score}`
+                chance.textContent=`Your chance is ${chances}` 
+            }
+        }
+        else
+        {
+            alert(`Your chances finished.Your final score is ${score}`)
+        }
+        
+        chances--;
+
+        // num.value=""
+        
+    }
+</script>

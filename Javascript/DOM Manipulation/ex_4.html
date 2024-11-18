@@ -1,0 +1,13 @@
+<input type="text" id="inputBox" onkeyup="handleChange()">
+
+<p id="res"></p>
+
+<script>
+    var inputBox=document.getElementById("inputBox")
+    var res=document.getElementById("res")
+
+    function handleChange(){
+        res.textContent=inputBox.value
+    }
+
+</script>

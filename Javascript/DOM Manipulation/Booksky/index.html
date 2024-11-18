@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksky</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar  -->
+    <nav class="navbar">
+        <div class="navheader">
+            <h1>Booksky</h1>
+        </div>
+    </nav>
+
+    <!-- Card display -->
+    <div class="container">
+        <div class="card">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia laboriosam nihil odio ipsa a perspiciatis tempora, quod, tempore sit eligendi ipsam dolorum hic! Pariatur quod modi expedita voluptas doloremque? Porro nihil natus nulla. Ea aspernatur explicabo optio provident illo.</p>
+            <button class="delete" onclick="deleteItem(event)">Delete</button >
+        </div>
+        <div class="card">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia laboriosam nihil odio ipsa a perspiciatis tempora, quod, tempore sit eligendi ipsam dolorum hic! Pariatur quod modi expedita voluptas doloremque? Porro nihil natus nulla. Ea aspernatur explicabo optio provident illo.</p>
+            <button class="delete" onclick="deleteItem(event)">Delete</button>
+        </div>
+        <div class="card">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia laboriosam nihil odio ipsa a perspiciatis tempora, quod, tempore sit eligendi ipsam dolorum hic! Pariatur quod modi expedita voluptas doloremque? Porro nihil natus nulla. Ea aspernatur explicabo optio provident illo.</p>
+            <button class="delete" onclick="deleteItem(event)">Delete</button>
+        </div>
+        <div class="card">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis officia laboriosam nihil odio ipsa a perspiciatis tempora, quod, tempore sit eligendi ipsam dolorum hic! Pariatur quod modi expedita voluptas doloremque? Porro nihil natus nulla. Ea aspernatur explicabo optio provident illo.</p>
+            <button class="delete" onclick="deleteItem(event)">Delete</button>
+        </div>
+    </div>
+
+    <!-- Button to display Card details-->
+    <div class="add_cart">
+        <button onclick="showDetails()">+</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    
+    <!-- Card Details -->
+    <div class="card_detail">
+
+        <h1>Add Book</h1>
+        <input type="text" name="book_title" id="book_title" placeholder="Book Title">
+        <input type="text" name="book_author" id="book_author" placeholder="Book Author">
+        <textarea name="description" id="description" placeholder="Short Description.."></textarea>
+        <div class="details_btn">
+            <button class="add_btn" onclick="add_details()">Add</button>
+            <button class="cancel_btn" onclick="cancel_details()">Cancel</button>
+        </div>
+    
+    </div>
+
+</body>
+<script>
+    function showDetails(){
+        var overlay=document.querySelector(".overlay");
+        var card_details = document.querySelector(".card_detail")
+
+        overlay.style.display="block"
+        card_details.style.display="block"
+    }
+    function add_details(){
+        var overlay=document.querySelector(".overlay");
+        var card_details = document.querySelector(".card_detail")
+        
+        const container = document.querySelector(".container")
+        const book_title = document.querySelector("#book_title");
+        const book_author = document.querySelector("#book_author");
+        const description  = document.querySelector("#description");
+
+        if(book_title.value=="" && book_author.value=="" && description.value=="")
+        {
+            return;
+        }
+
+
+        var div = document.createElement("div")
+        div.classList="card"
+        div.innerHTML=`<h2>${book_title.value}</h2>
+            <h5>${book_author.value}</h5>
+            <p>${description.value}</p>
+            <button class="delete" onclick="deleteItem(event)">Delete</button>`;
+
+        container.append(div)
+
+        book_title.value=""
+        book_author.value=""
+        description.value=""
+
+        overlay.style.display="none"
+        card_details.style.display="none"
+        
+    }
+    function cancel_details(){
+        var overlay=document.querySelector(".overlay");
+        var card_details = document.querySelector(".card_detail")
+        
+        const book_title = document.querySelector("#book_title");
+        const book_author = document.querySelector("#book_author");
+        const description  = document.querySelector("#description");
+
+        book_title.value=""
+        book_author.value=""
+        description.value=""
+        
+        overlay.style.display="none"
+        card_details.style.display="none"
+
+    }
+
+    function deleteItem(event){
+        event.target.parentElement.remove()
+    }
+</script>
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Et minus vitae sunt pariatur magni, distinctio eaque quo eius laudantium voluptatum, dicta repellendus ratione aliquam quos autem fugit nihil sint culpa illum placeat debitis at rerum est. Autem aliquam dolor corporis sint sequi voluptas ab dolores architecto fugiat earum, possimus exercitationem reiciendis optio quidem iusto sit eius pariatur ipsa perferendis enim porro ullam! Sint odit atque maiores incidunt deserunt at, porro vitae, repudiandae quia velit optio officiis nulla mollitia facilis commodi, voluptatibus saepe quisquam assumenda adipisci ipsum architecto. Vitae praesentium cupiditate, nam explicabo vel, perspiciatis quis neque ut est rem dolore? -->
+
+
+</html>

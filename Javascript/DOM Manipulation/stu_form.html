@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .stu_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form_details th{
+            padding: 5px;
+        }
+        input{
+            padding: 5px;
+            outline: none;
+        }
+        #course{
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            outline: none;
+        }
+        .savebtn{
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(19, 203, 19);
+            color: white;
+            border: 2px solid rgb(19, 203, 19);
+            font-size: 13px;
+        }
+        .result{
+            margin-top: 30px;
+        }
+        .res_head th,#res_value td{
+            padding: 10px;
+        }
+        .del{
+            padding: 8px 15px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stu_form">
+            <h1>Student Form</h1>
+            <table border="2" class="form_details">
+                <tr>
+                    <th>Name</th>
+                    <td>
+                        <input type="text" name="name" id="name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Age</th>
+                    <td>
+                        <input type="number" name="age" id="age">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <input type="radio" value="Male" name="gender" id="gender">Male
+                        <input type="radio" value="Female" name="gender" id="gender">Female 
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Course</th>
+                    <td>
+                        <select id="course" >
+                            <option value="Javascript">JavaScript</option>
+                            <option value="C">C</option>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="savebtn" onclick="submitBtn(event)">Save</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="result">
+            <table border="1" class="res">
+                <thead class="res_head">
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="res_value">
+                    <tr>
+                        <td>Amal</td>
+                        <td>22</td>
+                        <td>Python</td>
+                        <td>Male</td>
+                        <td>amal@gmail.com</td>
+                        <td><button class="del" onclick="deleteItem(event)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+<script>
+    var res_value = document.getElementById("res_value")
+
+    function submitBtn(event){
+        const name = document.getElementById("name")
+        const age = document.getElementById("age")
+        const gender = document.getElementById("gender")
+        const course =document.getElementById("course")
+        const email = document.getElementById("email")
+
+        var tr=document.createElement("tr");
+        tr.innerHTML =`<td>${name.value}</td>
+                        <td>${age.value}</td>
+                        <td>${course.value}</td>
+                        <td>${gender.value}</td>
+                        <td>${email.value}</td>
+                        <td><button class="del" onclick="deleteItem(event)">Delete</button></td>`
+        res_value.append(tr)
+
+        name.value=""
+        age.value=""
+        gender.value="Male"
+        course.value="Javascript"
+        email.value=""
+        
+    }
+
+    function deleteItem(event){
+        event.target.parentElement.parentElement.remove()
+
+    }
+</script>
+</html>

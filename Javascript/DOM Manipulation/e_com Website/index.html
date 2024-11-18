@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow:2px 2px 5px black;
+        }
+        .navlinks
+        {
+            display: flex;
+            gap: 30px;
+            list-style-type: none;
+        }
+        .toggle{
+            display: none;
+        }
+        .toggle_bar{
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            margin-bottom: 2px;
+        }
+        a{
+            text-decoration: none;
+            color: gray;
+        }
+        .sidebar{
+            position: absolute;
+            top: 0;
+            left: -60%;
+            padding: 20px;
+            background-color: rgb(14, 31, 72);
+            color: white;
+            height: 100%;
+            z-index: 3;
+            transition: left 0.5s linear;
+        }
+
+        .sidebar h1{
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .sidebar li{
+            list-style-type: none; 
+            padding: 10px;
+            margin: 10px;
+        }
+        .sidebar a{
+            color: white;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 10px 0px;
+            padding: 20px;
+            gap: 20px;
+
+        }
+        .header_img{
+            width: 150px;
+            height: 150px;
+        }
+        .header_btn{
+            margin: 10px 0px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .cus_exp{
+            padding: 20px;
+        }
+        .cus_heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        .cus_options{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .cus_opt{
+            background-color: rgb(239, 232, 232);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+        .images{
+            padding: 10px;
+        }
+        .new_arr h2,.most_wanted h2{
+            padding: 10px;
+        }
+        .new_arr_group,.most_wanted_group{
+            display: flex;
+            gap: 5px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .new_arr_img,.most_wanted_img{
+            width: 250px;
+            height: 250px;
+        }
+        
+        .new_arr-det,.most_wanted_det{
+            position: relative;
+        }
+
+        .new_arr_btn,.most_wanted_btn{
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            padding: 10px;
+        }
+        .newsletter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0px;
+        }
+        .newsletter p{
+            padding: 0px 24px;
+        }
+
+        .newsletter_email{
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+        }
+        .subscribe{
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        .footer{
+            background-color: rgb(21, 27, 33);
+            color: white;
+            padding: 40px 20px 40px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+        }
+        .social_media{
+            display: flex;
+            flex-direction: row;
+            padding: 0px 0px 0px 2px;
+            gap: 2px;
+        }
+        @media screen  and (max-width:600px){
+            .header_2 img{
+                display: none;
+            }
+            .cus_heading{
+                display: none;
+            }
+            .cus_options{
+                flex-direction: column;
+            }
+            .navlinks{
+                display: none;
+            }
+            .toggle{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <h1>Nostra</h1>
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="toggle" onclick="showSidebar()">
+            <div class="toggle_bar"></div>
+            <div class="toggle_bar"></div>
+            <div class="toggle_bar"></div>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <div onclick="closeSidebar()">X</div>
+        <ul class="sidebar_links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New Arrival</a></li>
+            <li><a href="#">Most Wanted</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="header_1">
+            <h1>Level up your style</h1>
+            <p>With our stunning Collections</p>
+            <button class="header_btn">Shop Now</button>
+        </div>
+        <div class="header_2">
+            <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Car.jpg" class="header_img" alt="header_img">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Customer Experiences -->
+        
+        <div class="cus_exp">
+            <div class="cus_heading">
+                <h2>We Provide Best Customer Experiences</h2>
+                <p>|| We ensure that our customer have the best shopping experience</p>
+            </div>
+            <div class="cus_options">
+                <div class="cus_opt">
+                    <h1>?</h1>
+                    <h4>Satisfaction Guarantee</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, quod.</p>
+                </div>
+                <div class="cus_opt">
+                    <h1>?</h1>
+                    <h4>New Arrival Everyday</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, quod.</p>
+                </div>
+                <div class="cus_opt">
+                    <h1>?</h1>
+                    <h4>Fast & Free Shipping</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, quod.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="images">
+
+            <!-- New Arrival  -->
+
+            <div class="new_arr">
+                <h2>New Arrivals</h2>
+                <div class="new_arr_group">
+                    <div class="new_arr-det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="new_arr_img" class="new_arr_img">
+                        <button class="new_arr_btn">Shop Now -></button>
+                    </div>
+                    <div class="new_arr-det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="new_arr_img"  class="new_arr_img">
+                        <button class="new_arr_btn">Shop Now -></button>
+                    </div>
+                    <div class="new_arr-det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="new_arr_img"  class="new_arr_img">
+                        <button class="new_arr_btn">Shop Now -></button>
+                    </div>
+                    <div class="new_arr-det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="new_arr_img"  class="new_arr_img">
+                        <button class="new_arr_btn">Shop Now -></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Wanted -->
+
+            <div class="most_wanted">
+                <h2>Most Wanted</h2>
+                <div class="most_wanted_group">
+                    <div class="most_wanted_det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="most_wanted_img" class="most_wanted_img">
+                        <button class="most_wanted_btn">Shop Now -></button>
+                    </div>
+                    <div class="most_wanted_det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="most_wanted_img" class="most_wanted_img">
+                        <button class="most_wanted_btn">Shop Now -></button>
+                    </div>
+                    <div class="most_wanted_det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="most_wanted_img" class="most_wanted_img">
+                        <button class="most_wanted_btn">Shop Now -></button>
+                    </div>
+                    <div class="most_wanted_det">
+                        <img src="F:\Classes\Full Stack Development\Practicing Session\Front End Development\New\Javascript\img\Color-Gadgets.jpg" alt="most_wanted_img" class="most_wanted_img">
+                        <button class="most_wanted_btn">Shop Now -></button>
+                    </div>
+                </div>
+            </div>  
+
+        </div>
+
+    </div>
+
+    <div class="newsletter">
+        <h2>Join our News Letter</h2>
+        <p>Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <input type="text" name="newsletter_email" class="newsletter_email">
+        <button class="subscribe">Subscribe -></button>
+    </div>
+
+    <div class="footer">
+        <h2>Nostra</h2>
+        <p>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
+        <div class="social_media">
+            <h4>#</h4>
+            <h4>$</h4>
+            <h4>%</h4>
+        </div>
+        <p>@ 2023 Nostra.com</p>
+    </div>
+
+</body>
+
+<script>
+    
+    var sidebar = document.querySelector(".sidebar");
+    
+    function showSidebar(){
+        sidebar.style.left="0"
+    }
+
+    function closeSidebar(){
+        sidebar.style.left="-60%"
+    }
+
+</script>
+
+</html>

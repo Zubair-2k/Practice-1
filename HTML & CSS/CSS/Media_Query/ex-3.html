@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Ex-3</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .header{
+            background-color: greenyellow;
+            width: 100%;
+            height: 200px;
+        }
+        .center,.footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .mid{
+            background-color: rgb(8, 175, 191);
+            flex-basis: 30%;
+            height: 200px;
+            flex-grow: 1;
+        }
+        .bottom{
+            background-color: rgb(207, 205, 205);
+            flex-basis: 20%;
+            height: 200px;
+            flex-grow: 1;
+        }
+
+        @media screen and (max-width:700px) {
+            .mid{
+                flex-basis: 100%;
+            }
+            .bottom{
+                flex-basis: 40%;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .bottom{
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="center">
+            <div class="mid"></div>
+            <div class="mid"></div>
+            <div class="mid"></div>
+        </div>
+        <div class="footer">
+            <div class="bottom"></div>
+            <div class="bottom"></div>
+            <div class="bottom"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+</body>
+</html>

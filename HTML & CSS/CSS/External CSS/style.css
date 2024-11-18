@@ -1,0 +1,17 @@
+div
+{
+    background-color: red;
+    height: 170px;
+    padding: 40px;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
+}
+
+p{
+    color: blue;
+    text-align: center;
+}

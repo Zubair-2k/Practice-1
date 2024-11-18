@@ -1,0 +1,22 @@
+<label for="num-1">Num-1</label>
+<input type="number" name="num-1" id="num-1" style="display: block;">
+<label for="num-2">Num-2</label>
+<input type="number" name="num-2" id="num-2" style="display: block;">
+
+<button onclick="submit()">Submit</button>
+
+<p id="result">Result</p>
+
+<script>
+    const submit=()=>{
+        var num_1=parseInt(document.getElementById("num-1").value);
+        var num_2=parseInt(document.getElementById("num-2").value);
+        var res=document.getElementById("result");
+        
+        var total=num_1+num_2;
+
+        // console.log(total)
+        res.textContent=total;
+
+    }
+</script>

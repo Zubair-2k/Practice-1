@@ -1,0 +1,13 @@
+
+<button onclick="add()">Add Hello</button>
+<div id="res"></div>
+
+<script>
+    var res = document.getElementById("res")
+    function add(){
+        var h1=document.createElement("h1")
+        h1.setAttribute("id","head")
+        h1.textContent="Hello"
+        res.append(h1)
+    }
+</script>

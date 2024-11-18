@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters in Javascript</title>
+</head>
+<body>
+    <h1>Getter and Setter Example in JS</h1>
+</body>
+<script>
+    class Circle{
+        constructor(radius){
+            this.radius=radius
+        }
+        get diameter(){
+            return this.radius *2
+        }
+        set diameter(diameter){
+            this.radius = diameter/2
+        }
+        get area(){
+            return (Math.PI)*this.radius*this.radius;
+            
+        }
+    }
+
+    const circle =new Circle(10);
+    console.log(circle)
+    console.log(circle.radius)
+    console.log(circle.diameter)
+    console.log(Math.trunc(circle.area))
+    circle.diameter=50
+    console.log(Math.trunc(circle.area))
+
+
+</script>
+</html>

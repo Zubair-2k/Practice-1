@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        #todoInput{
+            padding: 7px;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid rgb(134, 134, 134);
+        }
+        .addbtn{
+            padding: 8px 15px;
+            background-color: rgb(51, 194, 51);
+            color: white;
+            border-radius: 5px;
+            border: 2px solid rgb(51, 194, 51);
+        }
+        #todoList{
+            list-style-type: none;
+        }
+        .del{
+            padding: 8px 15px;
+            background-color: rgb(194, 51, 51);
+            color: white;
+            border: 2px solid rgb(194, 51, 51);
+            border-radius: 5px;
+            margin: 7px;
+        }
+        .edit{
+            padding: 8px 15px; 
+            background-color: rgb(34, 101, 226);
+            color: white;
+            border: 2px solid rgb(34, 101, 226);
+            border-radius: 5px;
+            margin: 7px;
+        }
+
+        #updateInput{
+            padding: 7px;
+            border-radius: 5px;
+            outline: none;
+            border: 2px solid rgb(134, 134, 134);
+        }
+
+        .savebtn{
+            padding: 8px 15px;
+            background-color: rgb(51, 194, 51);
+            color: white;
+            border-radius: 5px;
+            border: 2px solid rgb(51, 194, 51);
+            margin: 7px;
+        }
+
+        .cancelbtn{
+            padding: 8px 15px;
+            background-color: gray;
+            color: white;
+            border-radius: 5px;
+            border: 2px solid gray;
+            margin: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="todoInput">
+    <Button onclick="addTodo()" class="addbtn">Add</Button>
+
+    <ul id="todoList">
+        <!-- <li>Item-1 <button onclick="deleteItem(event)">Delete</button><button onclick="editTodo()">Edit</button></li>
+        <li>Item-2 <button onclick="deleteItem(event)">Delete</button><button onclick="edit(event)">Edit</button></li>
+        <li>Item-3 <button onclick="deleteItem(event)">Delete</button><button onclick="edit(event)">Edit</button></li> -->
+    </ul>
+
+</body>
+
+<script>
+    function addTodo(){
+        var inputBox = document.querySelector("#todoInput")
+        var ul = document.querySelector("#todoList")
+        var enteredValue = inputBox.value 
+
+        if (enteredValue === "") return;
+
+        const li = document.createElement("li");
+        li.innerText = enteredValue;
+
+        // Create a Delete Button
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML="Delete";
+        deleteButton.classList="del"
+        deleteButton.onclick=()=> deleteTodo(event);
+
+        // Create Edit button
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.classList="edit"
+        editButton.onclick = () => editTodo(li);
+
+        // Append the Delete button to the list item
+        li.append(deleteButton);
+
+        // Append the Edit button to the list item
+        li.append(editButton);
+
+        ul.append(li)
+
+        inputBox.value=""
+    }
+
+    function deleteTodo(event){
+        // Delete the selected TodoList
+        event.target.parentElement.remove()
+    }
+
+    function editTodo(li) {
+        // Get the existing text from the list item
+        const currentText = li.firstChild.nodeValue;
+        
+        // Create an input field with the current text
+        const inputField = document.createElement("input");
+        inputField.type = "text";
+        inputField.id="updateInput";
+        inputField.value = currentText;
+        
+        // Create Save button
+        const saveButton = document.createElement("button");
+        saveButton.classList="savebtn"
+        saveButton.innerText = "Save";
+        saveButton.onclick = () => saveEdit(li, inputField.value);
+
+        //Create Cancel Button
+        const cancelButton = document.createElement("button");
+        cancelButton.classList="cancelbtn"
+        cancelButton.innerHTML="Cancel";
+        cancelButton.onclick=()=> cancelTodo(li,currentText);
+
+
+        // Clear the existing content and add the input field and Save button
+        li.innerHTML = ""; // Clear list item
+        li.append(inputField);
+        li.append(saveButton);
+        li.append(cancelButton);
+    }
+
+    function saveEdit(li, newText) {
+        // Update the text of the list item with the new value
+        li.innerHTML = newText;
+
+        // Create a Delete Button
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML="Delete";
+        deleteButton.classList="del"
+        deleteButton.onclick=()=> deleteTodo(event);
+
+        // Create Edit button
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.classList="edit"
+        editButton.onclick = () => editTodo(li);
+
+        li.append(deleteButton)
+        li.append(editButton);
+    }
+
+    function cancelTodo(li,prev_Value){
+        // Update the text of the list item with the old value
+        li.innerHTML = prev_Value;
+
+        // Create a Delete Button
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML="Delete";
+        deleteButton.classList="del"
+        deleteButton.onclick=()=> deleteTodo(event);
+
+        // Create Edit button
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit";
+        editButton.classList="edit"
+        editButton.onclick = () => editTodo(li);
+        
+        li.append(deleteButton);
+        li.append(editButton);
+
+    }
+</script>
+</html>
