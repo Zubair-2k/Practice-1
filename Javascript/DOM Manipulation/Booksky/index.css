@@ -25,12 +25,14 @@
     gap: 13px;
     background-color: black;
     color: white;
+    width: 70%;
     padding: 20px;
     border-radius: 10px;
 }
 
 .card h2{
-    color: rgb(232, 71, 92)
+    color: rgb(232, 71, 92);
+    white-space: nowrap;
 }
 
 .delete{
@@ -47,8 +49,8 @@
     padding: 25px;
     border-radius: 50%;
     position: fixed;
-    left: 90vw;
-    top: 80vh;
+    left: 87%;
+    top: 80%;
     z-index: 1;
     overflow: hidden;
 }
@@ -64,7 +66,7 @@
 .overlay{
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: black;
     opacity: 0.6;
@@ -79,12 +81,15 @@
     background-color: rgb(232, 71, 92);
     width: 30%;
     padding: 30px;
-    position: absolute;
+    position: fixed;
     top: 24vh;
     left: 33vw;
     z-index: 3;
     border-radius: 10px;
+    /* transition: all 2s linear; */
 }
+
+
 #book_title,#book_author{
     display: block;
     width: 100%;
@@ -94,7 +99,6 @@
     border: none;
     outline: none;
     border-bottom: 2px solid black;
-    
 }
 
 #description{
@@ -113,13 +117,42 @@
     color: black;
 }
 
+.details_btn{
+    display: flex;
+    gap: 10px;
+}
+
 .add_btn,.cancel_btn{
     padding: 10px 20px;
     margin: 20px 0px 0px 10px;
     background-color: black;
     color: white;
     border-radius: 10px;
+}
 
+@media screen and (max-width:750px) {
+    .add_cart{
+        left: 85vw;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .card_detail{
+        width: 50%;
+        top: 28vh;
+        left: 18vw;
+    }
+    .add_cart{
+        left: 70%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .card_detail{
+        width: 50%;
+        top: 29vh;
+        left: 18vw;
+    }
 }
 
 
