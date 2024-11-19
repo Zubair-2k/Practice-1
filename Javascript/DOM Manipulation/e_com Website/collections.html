@@ -60,43 +60,6 @@
 
 </body>
 
-<script>
-    
-    var search =document.querySelector("#searchInputBox");
-    var products = document.querySelector(".products_display");
-    var products_list = products.querySelectorAll("div");
-    var noDataFound = document.querySelector(".noDataFound")
-
-    console.log(search)
-    
-
-    function searchImg(event){
-
-        var enteredValue = event.target.value.toUpperCase()
-
-        let filteredCount = 0
-
-        // console.log(products_list[0].querySelector("p").textContent)
-
-        for(let count=0;count<products_list.length;count++)
-        {
-            var productname=products_list[count].querySelector("p").textContent
-
-            if(productname.toUpperCase().indexOf(enteredValue)<0){
-                products_list[count].style.display="none"
-            }
-            else{
-                products_list[count].style.display="block"
-                filteredCount++
-            }
-        }
-
-        if(filteredCount<=0){
-            noDataFound.style.display="block"
-        }
-        else{
-            noDataFound.style.display="none"
-        }
-    }
+<script src="index.js">
 </script>
 </html>
