@@ -1,0 +1,1 @@
+//Set the timer by using setInterval, you need to clean up this timer when the component is unmounted from the DOM
