@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.overall_container{
+    background-color: black;
+}
+.navbar{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid orange;
+}
+.navbar h1{
+    background-color: black;
+    color: orange;
+}
+.container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book_box{
+    margin: 50px;
+    padding: 25px;
+    flex-basis: 21%;
+    border-radius: 13px;
+    background-color: rgb(205, 15, 91);
+}
+
+.book_box h1{
+    background-color: rgb(205, 15, 91);
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+
+.book_box h3{
+    background-color: rgb(205, 15, 91);
+    color: white;
+    padding: 7px;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.book_box p{
+    background-color: rgb(205, 15, 91);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.del_btn{
+    background-color: rgb(205, 15, 91);;
+}
+
+
+.del_btn button{
+    margin-left: 30%;
+    padding: 10px;
+    width: 40%;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    box-shadow: 1px 0px 34px white;
+    cursor: pointer;
+}
+
+.add_btn button{
+    background-color: orange;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 30px;
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    font-size: 35px;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    box-shadow: 0px 0px 23px orange;
+    cursor: pointer;
+}
+
+.overlay{
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.overlay_box{
+    background-color: orange;
+    position: absolute;
+    padding: 40px;
+    width: 40%;
+    border-radius: 25px;
+    top: 25%;
+    left: 26%;
+    z-index: 2;
+    display: none;
+}
+
+.overlay_box h1{
+    background-color: orange;
+    text-align: center;
+}
+
+.overlay_box form{
+    background-color: orange;
+}
+
+.overlay_box input{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+}
+
+.overlay_box input:focus{
+    outline: none;
+    
+}
+
+.overlay_box input::placeholder{
+    color: black;
+    font-size: 20px;
+}
+
+.overlay_box textarea{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 90%;
+    padding: 20px;
+    margin: 5px;
+}
+
+.overlay_box textarea:focus{
+    outline: none;
+}
+
+.overlay_box textarea::placeholder{
+    color: black;
+    font-size: 20px;
+}
+
+.overlay_box button{
+    color: white;
+    margin-top: 5%;
+    margin-left: 20%;
+    padding: 11px;
+    width: 20%;
+    border-radius: 13px;
+    box-shadow: 3px 4px 18px black;
+    cursor: pointer;
+    /* display: none; */
+}

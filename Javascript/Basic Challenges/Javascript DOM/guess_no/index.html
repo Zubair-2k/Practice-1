@@ -1,0 +1,49 @@
+<h1>Guess the number from 1 to 10</h1>
+
+<input type="number" id="num">
+<button id="check" onclick="check()">Check</button>
+
+<p id="comans">Computer Answer :</p>
+<p id="res1">You are Wrong/Right</p>
+
+<p id="score">Score : 10</p>
+
+<!-- <h1 id="res2"></h1> -->
+
+
+<script>
+    var scr = 10
+
+    function check(){
+        var n1=document.getElementById("num")
+        var r1=document.getElementById("res1")
+        // var r2=document.getElementById("res2")
+        var ca=document.getElementById("comans")
+        var sc=document.getElementById("score")
+        var ran_num=Math.random()
+        var n1_val=Number(n1.value)
+        var n2_val=(Math.floor(ran_num*10)+1)
+    
+        if (n1_val==n2_val)
+        {
+            r1.textContent="You are Right"
+            score.textContent="Score : "+scr
+            ca.textContent="Computer Answer : "+n2_val
+            // r2.textContent="You won"
+            alert("You won")
+        }
+        else
+        {
+            r1.textContent = "You are Wrong"
+            scr=scr-1
+            score.textContent="Score : "+scr
+            ca.textContent="Computer Answer : "+n2_val
+        }
+
+        if(scr == 0)
+        {
+            // r2.textContent="You loss"
+            alert("You loss")
+        }
+    }
+</script>

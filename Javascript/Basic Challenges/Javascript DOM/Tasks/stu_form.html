@@ -1,0 +1,133 @@
+<div style="text-align: center;">
+    <h1>Student Form</h1>
+    <div class="input_table">
+        <table border="1" style="margin-left: auto;margin-right: auto; width: 400px;" >
+            <tr>
+                <td style="padding: 7px;">
+                    <b>Name :</b>
+                </td>
+
+                <td>
+                    <input type="text" id="name" style="padding: 7px;width: 100%;" placeholder="Enter the name">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 7px;">
+                    <b>Age :</b>
+                </td>
+
+                <td>
+                    <input type="number" id="age" style="padding: 7px;width: 100%;" placeholder="Enter the age">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 7px;">
+                    <b>Gender :</b>
+                </td>
+
+                <td>
+                    <input type="radio" name="Gender" value="Male">Male
+                    <input type="radio" name="Gender" value="Female">Female
+                    <input type="radio" name="Gender" value="Others">Others
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 7px;">
+                    <b>Course :</b>
+                </td>
+
+                <td >
+                    <select id="course" style="padding: 7px;width: 100%;">
+                        <option>
+                            C
+                        </option>
+                        <option>Python</option>
+                        <option>Javascript</option>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding: 7px;">
+                    <b>Email :</b>
+                </td>
+                <td>
+                    <input type="email" id="email" style="padding: 7px;width: 100%;" placeholder="Enter the email">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>   
+                <button id="btn" onclick="save()" style="width: 100%;padding: 7px;"><b>Save</b></button>
+            </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="res_table" style="margin-top: 50px;">
+        <table id="result" border="1" style="margin-left: auto;margin-right: auto; width: 500px;">
+            
+            <tr >
+                <td style="padding: 10px;">
+                    <b>Name</b>
+                </td>
+
+                <td style="padding: 10px;">
+                    <b>Age</b>
+                </td>
+
+                <td style="padding: 10px;">
+                    <b>Gender</b>
+                </td>
+
+                <td style="padding: 10px;">
+                    <b>Course</b>
+                </td>
+
+                <td style="padding: 10px;">
+                    <b>Email</b>
+                </td>
+
+                <td style="padding: 10px;">
+                    <b>Action</b>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+
+<script>
+    var t2=document.getElementById("result")
+
+    function save()
+    {
+        var inp_name = document.getElementById("name")
+        var inp_age = document.getElementById("age")
+        var inp_gender = document.getElementsByName("Gender")
+        var inp_course = document.getElementById("course")
+        var inp_email = document.getElementById("email")
+
+        for(var i=0;i<inp_gender.length;i++)
+        {
+            if(inp_gender[i].checked)
+            {
+                res_gender = inp_gender[i].value
+            }
+        }
+
+
+        var tr=document.createElement("tr")
+        tr.innerHTML="<td style='padding: 7px;'>"+inp_name.value+"</td>"+"<td style='padding: 7px;'>"+inp_age.value+"</td>"+"<td style='padding: 7px;'>"+res_gender+"</td>"+"<td style='padding: 7px;'>"+inp_course.value+"</td>"+"<td style='padding: 7px;'>"+inp_email.value+"</td>"+"<button onclick='deleteitem(event)' style='padding: 7px;width: 100%'>Delete</button>"
+        t2.append(tr)
+    }
+
+    function deleteitem(event)
+    {
+        event.target.parentElement.remove()
+    }
+
+</script>

@@ -1,0 +1,33 @@
+<input type="text" class="srch_txt">
+<div class="search">
+    <h1>One</h1>
+    <h1>Two</h1>
+    <h1>Three</h1>
+    <h1>Four</h1>
+    <h1>Five</h1>
+    <h1>Six</h1>
+</div>
+
+<script>
+
+    var enteredValue = ""
+    var container = document.querySelector(".search")
+    var ele = container.querySelectorAll("h1")
+    var search_text = document.querySelector(".srch_txt")
+
+    search_text.addEventListener("keyup",function(){
+        enteredValue = event.target.value.toUpperCase()
+
+        for(var i=0;i<ele.length;i++)
+        {
+            if(ele[i].textContent.toUpperCase().indexOf(enteredValue)<0)
+            {
+                ele[i].style.display="none"
+            }
+            else
+            {
+                ele[i].style.display="block"
+            }
+        }
+    })
+</script>

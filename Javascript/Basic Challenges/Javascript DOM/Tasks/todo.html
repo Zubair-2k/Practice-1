@@ -1,0 +1,36 @@
+<input type="text" id="input">
+<button id="btn" onclick="add()">
+    Add
+</button>
+
+<ul id="listitem">
+    
+</ul>
+
+<script>
+    var input=document.getElementById("input")
+    var ul=document.getElementById("listitem")
+
+    function add()
+    {
+        var li=document.createElement("li")
+        // var head=document.createElement("h1")
+        // head.innerHTML=input.value + "<button onclick='deleteitem(event)'>Delete</button>"
+        // console.log(h1)
+        li.innerHTML=input.value + "<button onclick='deleteitem(event)'>Delete</button>" 
+        // li.append(head)
+        ul.append(li)
+    }
+
+    function deleteitem(event)
+    {
+        event.target.parentElement.remove()
+    }
+
+    // function edititem(event)
+    // {
+    //     var edit=event.target.parentElement
+    //     console.log(edit.innerHTML)
+
+    // }
+</script>   

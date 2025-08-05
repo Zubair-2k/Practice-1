@@ -1,0 +1,63 @@
+<table>
+    <tr>
+        <td>
+            <p>Enter the number 1 :</p>
+        </td>
+
+        <td>
+            <input type="text" id="num1">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <p>Enter the number 2 :</p>
+        </td>
+
+        <td>
+            <input type="text" id="num2">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="total" onclick="add()">Total</button>
+        </td>
+
+        <td>
+            <button id="clear" onclick="clr()">Clear</button>
+        </td>
+        
+    </tr>
+    
+</table>
+
+<p id="res">Result</p>
+
+<script>
+    function add()
+    {
+        var n1=document.getElementById("num1")
+        var n2=document.getElementById("num2")
+        var r1=document.getElementById("res")
+
+        var n1_val=Number(n1.value)
+        var n2_val=Number(n2.value)
+
+        var total = n1_val + n2_val
+        r1.textContent="Result : " + total
+        
+    }
+
+    function clr()
+    {
+        var n1=document.getElementById("num1")
+        var n2=document.getElementById("num2")
+        var r1=document.getElementById("res")
+
+        n1.value=""
+        n2.value=""
+        r1.textContent="Result : "
+
+    }
+</script>
