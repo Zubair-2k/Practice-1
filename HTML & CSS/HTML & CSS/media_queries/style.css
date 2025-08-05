@@ -1,0 +1,47 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.one{
+    background-color: greenyellow;
+    margin: 5px;
+    height: 119px;
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+.two{
+    background-color: cyan;
+    margin: 5px;
+    height: 119px;
+    flex-basis: 30%;
+    flex-grow: 1;
+}
+
+.three{
+    background-color: gray;
+    margin: 5px;
+    height: 119px;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+@media screen and (max-width:600px){
+    .two{
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .three{
+        flex-basis:40%;
+    }
+}
+
+@media screen and (max-width:400px){
+    .three{
+        flex-basis:100%;
+    }
+}
