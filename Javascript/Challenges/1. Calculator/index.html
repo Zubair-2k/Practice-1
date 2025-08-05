@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <meta name="description" content="This is a Calculator App used to calculate arithmetic values"/>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator">
+
+        <h1>Calculator</h1>
+
+        <div class="calculator_container">
+
+            <div class="calculator_display">
+
+                <input type="text" name="display_num" placeholder="Enter the Values" class="display_values"/>
+
+            </div>
+
+            <div class="calculator_buttons">
+
+                <div class="number_btn" onclick="handleClick(event)">%</div>
+                <div class="number_btn" onclick="handleClick(event)">sqrt</div>
+                <div class="number_btn" onclick="handleClick(event)">CE</div>
+                <div class="number_btn" onclick="handleClick(event)">C</div>
+                <div class="number_btn" onclick="handleClick(event)">7</div>
+                <div class="number_btn" onclick="handleClick(event)">8</div>
+                <div class="number_btn" onclick="handleClick(event)">9</div>
+                <div class="number_btn" onclick="handleClick(event)">-</div>
+                <div class="number_btn" onclick="handleClick(event)">4</div>
+                <div class="number_btn" onclick="handleClick(event)">5</div>
+                <div class="number_btn" onclick="handleClick(event)">6</div>
+                <div class="number_btn" onclick="handleClick(event)">/</div>
+                <div class="number_btn" onclick="handleClick(event)">1</div>
+                <div class="number_btn" onclick="handleClick(event)">2</div>
+                <div class="number_btn" onclick="handleClick(event)">3</div>
+                <div class="number_btn" onclick="handleClick(event)">*</div>
+                <div class="number_btn" onclick="handleClick(event)">.</div>
+                <div class="number_btn" onclick="handleClick(event)">0</div>
+                <div class="number_btn" onclick="handleCalculation()">=</div>
+                <div class="number_btn" onclick="handleClick(event)">+</div>
+
+            </div>
+
+        </div>
+
+    </div>    
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="expenseTracker">
+        <h1 class="expenseTrackerHeading">Expense Tracker</h1>
+
+        <div class="expenseTrackerContainer">
+
+            <div class="totalAmount">
+
+                <div class="totalBalance">
+                    <h3 class="totalAmountHeading">Total Balance</h3>
+                    <p class="totalBalanceValue">Rs. 0.00</p>
+                </div>
+
+                <div class="incomeExpense">
+
+                    <div class="incomeDisplay">
+                        <h3 class="totalAmountHeading">Income</h3>
+                        <p class="incomeValue">+Rs. 0.00</p>
+                    </div>
+
+                    <div class="expenseDisplay">
+                        <h3 class="totalAmountHeading">Expense</h3>
+                        <p class="expenseValue">-Rs. 0.00</p>
+                    </div>
+
+                </div>           
+            </div>
+
+            <div class="transactions">
+                
+                <div class="transactionsHeading">Transactions</div>
+
+                <div class="noTransactions">No Transaction Found</div>
+
+                <div class="transactionsField">
+
+                </div>
+
+                <button class="clearAllBtn">Clear All</button>
+
+                <!-- <div class="transactionsDetails">
+
+                    <div class="transactionsNameContainer">
+                        <button class="clearBtn">X</button>
+                        
+                        <div class="transactionNameDetails">
+                            <h5 class="transactionsName">salary</h5>
+                            <p class="transactionDate">2024-08-09</p>
+                        </div>
+                    </div>
+                    
+                    <p class="subtractBalance">- Rs. 5000.00</p>
+                    
+
+                </div> -->
+                
+            </div>
+
+            <div class="addTransaction">
+
+                <h2 class="addTransactionHeading">Add Transaction</h2>
+
+                <div class="incomeExpenseBtn">
+                    <button class="incomeBtn active">Income</button>
+                    <button class="expenseBtn">Expense</button>
+                </div>
+
+                <form action="">
+                    <div class="nameContainer">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="nameInput"/>
+                    </div>
+
+                    <div class="amountDateContainer">
+
+                        <div class="amount">
+                            <label for="amountValue">Amount</label>
+                            <input type="number" class="amountInput" placeholder="0">
+                        </div>
+
+                        <div class="date">
+                            <label for="dateValue">Date</label>
+                            <input type="date" name="dateValue" class="dateInput"/>
+                        </div>
+                        
+                    </div>
+
+                    <button class="submitBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

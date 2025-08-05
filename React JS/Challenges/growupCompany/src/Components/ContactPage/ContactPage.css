@@ -1,0 +1,185 @@
+.contactPage{
+    width: 100vw;
+    /* height: 100vh; */
+    color: black;
+    background-image: url("poster2.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: -2;
+}
+
+/* .contactPage::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(41, 39, 39, 0.637);
+    } */
+    
+.contactBgcolor{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(41, 39, 39, 0.637);
+    z-index: -1;
+}
+
+.getInTouchHeading {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    z-index: 1;
+}
+
+.getInTouchHeading h3{
+    margin: 50px 0 0 0;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+
+.contactContainer{
+    display: flex;
+    gap: 30px;
+    margin: 70px 30px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.56);
+    z-index: 1;
+}
+
+.contactInfo{
+    /* background-color: rgb(32, 46, 68); */
+    background-color: rgb(51, 71, 88);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    width: 40%;
+    padding: 30px 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.contactInfoData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+}
+
+.contactHeader h5{
+    font-size: 20px;
+    margin: 0;
+}
+
+.phoneInfo{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 23px;
+}
+
+.emailInfo{
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: 23px;
+}
+
+.locationInfo{
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-start; */
+    gap: 30px;
+}
+
+.getInTouchInput{
+    color: black;
+    padding: 10px;
+    width: 60%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+
+}
+
+.nameEmailInput{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nameInput,.emailInput{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 5px;
+}
+
+.phoneInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.messageInput{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+label{
+    margin: 0 0 0 5px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    outline: none;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 530;
+    padding: 0 0 0 7px;
+}
+
+textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    outline: none;
+    height: 90px;
+    font-size: 14px;
+    font-weight: 532;
+    padding: 0 0 0 10px;
+}
+
+.submitBtn{
+    width: 25%;
+    padding: 15px;
+    /* margin: 0 auto; */
+}
+
+/* .contactPage h2{
+    color: black;
+} */

@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.drag_drop_list{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drag_drop_container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.containerCard{
+    border: 2px dashed black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.element{
+    border: 1px solid black;
+    padding: 10px;
+    width: 250px;
+    cursor: grab;
+}
+
+.dragging{
+    opacity: 0.5;
+}

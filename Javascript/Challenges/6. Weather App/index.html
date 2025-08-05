@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- API Link -->
+
+    <!-- https://api.openweathermap.org/data/2.5/weather?q=erode&appid=a00298292db9840ab5ed42bc308deafe&units=Metric -->
+
+</head>
+<body>
+    <div class="weather_app">
+        <div class="weather_app_container">
+            <div class="search_city">
+                <input type="text" class="search_input" placeholder="Search City" onchange="handleSearch(event)">
+                <i class="search_icon">%</i>
+            </div>
+
+            <div class="weather_details">
+                <img src="" alt="">
+                <h4 class="city_temp">33'C</h4>
+                <h5 class="city_name">Salem</h5>
+                <h6 class="country_name">IN</h6>
+                <div class="direction">
+                    <div class="lat">
+                        <p class="latName">latitude</p>
+                        <p class="latValue">11.65</p>
+                    </div>
+                    <div class="long">
+                        <p class="longName">longtitude</p>
+                        <p class="longValue">78.1667</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wind_details">
+                <div class="humidity_details">
+                    <i></i>
+                    
+                    <div class="humidity">
+                        <p class="humidityValue">31%</p>
+                        <p class="humidityName">Humidity</p>
+                    </div>
+
+                </div>
+                
+                <div class="wind_speed_details">
+                    <i></i>
+                    
+                    <div class="wind_speed">
+                        <p class="windSpeedValue">1.54 km/hr</p>
+                        <p class="windSpeedName">Wind Speed</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="footer">
+                <p>Designed by Zubair</p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

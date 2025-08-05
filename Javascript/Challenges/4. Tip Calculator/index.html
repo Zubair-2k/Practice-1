@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="tip_calculator">
+        <h1>Tip Calculator</h1>
+        <div class="tip_calculator_container">
+            <div class="tip_form_container">
+
+                <div class="tips_form_items">
+                    <label for="billValue">Bill :</label>
+                    <div class="billValueContainer">
+                        <p>Rs.</p>
+                        <input type="number" name="billValue" class="billValue">
+                    </div>
+                </div>
+
+                <div class="tips_form_items">
+                    <label>Select Tip % : </label>
+                    <div class="tip_percentages">
+                        <button class="tipPercentValue" onclick="handleTipValue(event)">5%</button>
+                        <button class="tipPercentValue" onclick="handleTipValue(event)">10%</button>
+                        <button class="tipPercentValue" onclick="handleTipValue(event)">15%</button>
+                        <button class="tipPercentValue" onclick="handleTipValue(event)">20%</button>
+                        <button class="tipPercentValue" onclick="handleTipValue(event)">25%</button>
+                        <input type="text" class="tipValue" value="5"/>
+                    </div>
+                </div>
+
+                <div class="tips_form_items">
+                    <label for="personCount">Number of people : </label>
+                    <div class="personCountContainer">
+                        <i className="fa-solid fa-user"></i>
+                        <input type="number" name="personCount" class="personCount"  value="1">
+                    </div>
+                </div>
+
+                <button class="calculate_btn" onclick="handleCalculate()">Calculate</button>
+
+            </div>
+            <div class="tip_display_container">
+                <div class="tipAmountContainer">
+                    <p class="tipAmount">Tip Amount<span>/ Person</span></p>
+                    <h2 class="tipAmountValue">Rs 0.00</h2>
+                </div>
+
+                <div class="totalAmountContainer">
+                    <p class="totalAmount">Total<span>/ Person</span></p>
+                    <h2 class="totalAmountValue">Rs 0.00</h2>
+                </div>
+
+                <button onclick="handleReset()" class="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

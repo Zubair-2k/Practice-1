@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img_slider{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.img_slider h1{
+    text-transform: uppercase;
+}
+
+.img_slider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.img_slider_container button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 200;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sliderImg{
+    width: 400px;
+    height: 400px;
+}

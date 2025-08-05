@@ -1,0 +1,121 @@
+.servicePage{
+    color: black;
+    background-color: white;
+    width: 100%;
+    padding: 35px 0;
+    /* height: 90vh; */
+}
+
+.serviceHeader{
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 35px 0;
+}
+
+.serviceContainer{
+        width: 100%;
+    margin: 30px auto;
+    /* padding: 30px 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.eduServices{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 55%;
+    height: 100px;
+    margin: 60px auto;
+    padding: 30px 70px;
+    border-radius: 5px;
+    position: relative;
+    transform: skewX(-10deg);
+}
+
+.eduContent{
+    transform: skewX(10deg);
+}
+
+.eduSwipeBtn{
+    position: absolute;
+    left: -90px;
+    border: none;
+    /* background-color: #3a3a65; */
+    background-color: rgb(51, 71, 88);
+    color: white;
+    padding: 40px;
+    /* rgb(51, 71, 88) */
+}
+
+.eduSwipeText{
+    background-color: transparent;
+    transform: skewX(10deg);
+    border: none;
+}
+
+.eduImage{
+    position: relative;
+}
+
+.eduImg{
+    position: absolute;
+    top: -100px;
+    left: -25px;
+    width: 230px;
+    height: 200px;
+}
+
+.indusServices{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 55%;
+    height: 100px;
+    margin: 60px auto;
+    padding: 30px 70px;
+    border-radius: 5px;
+    position: relative;
+    transform: skewX(10deg);
+}
+
+.indusContent{
+    transform: skewX(-10deg);
+}
+
+.indusSwipeBtn{
+    position: absolute;
+    right: -65px;
+    border: none;
+    /* background-color: #3a3a65; */
+    background-color: rgb(51, 71, 88);
+    color: white;
+    padding: 50px;
+}
+
+.indusSwipeText{
+    background-color: transparent;
+    transform: skewX(-10deg);
+    border: none;
+}
+
+.indusImage{
+    position: relative;
+}
+
+.indusImg{
+    position: absolute;
+    top: -100px;
+    left: -215px;
+    width: 230px;
+    height: 200px;
+}

@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: rgb(21, 26, 62);
+}
+
+.randomPassword{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.randomPasswordContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid black;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgb(225, 219, 225);
+    border: none;
+    /* box-shadow: 0 0 20px 0px rgb(225, 219, 225); */
+    box-shadow: 0 0 10px rgb(167, 166, 166);
+}
+
+.randomPasswordHeading{
+    /* border-bottom: 3px solid rgba(69, 66, 66,0.9); */
+    /* color: rgb(102, 99, 99); */
+    padding-bottom: 3px;
+    color: rgb(66, 65, 65);
+    border-bottom: 3px solid rgb(66, 65, 65);
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 3px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    min-width: 300px;
+    gap: 30px;
+}
+
+.checkboxField{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="checkbox"]{
+    margin: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.checkboxField label{
+    color: rgb(120, 119, 119);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.passwordLength{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.passwordLengthRange{
+    width: 90%;
+}
+
+.passwordLengthValue{
+    color: rgb(120, 119, 119);
+}
+
+.passwordBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.generatePasswordBtn{
+    background-color: rgb(21, 159, 21);
+    color: rgb(235, 233, 233);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgb(8, 91, 8);
+}
+
+.generatePasswordBtn:hover{
+    background-color: rgb(14, 115, 14);
+    color: rgb(201, 193, 193);
+}
+
+.clearPasswordBtn{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    /* margin: 0 auto; */
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgb(116, 13, 13);
+    /* text-align: center; */
+}
+
+.clearPasswordBtn:hover{
+    background-color: rgb(192, 13, 13);
+    color: rgb(201, 193, 193);;
+}
+
+
+.passwordField{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 10px;
+    background-color: rgb(174, 171, 171);
+    border-radius: 5px;
+}
+
+.passwordInput{
+    padding: 10px;
+    width: 80%;
+    background: none;
+    border: none;
+    font-size: 16px;
+}
+
+.passwordInput::placeholder{
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.copyPasswordBtn{
+    background-color: rgb(0, 102, 255);
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgb(8, 47, 105);
+}
+
+.copyPasswordBtn:hover{
+    background-color: rgb(9, 83, 195);
+    color: rgb(201, 193, 193);;
+}
+

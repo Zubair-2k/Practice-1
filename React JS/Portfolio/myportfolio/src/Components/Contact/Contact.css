@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact{
+    animation: contact linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes contact {
+    
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+.contact .contact_heading{
+    color: white;
+    text-align: center;
+    padding: 0 0 40px 0;
+}
+
+.contact_container{
+    color: white;
+    background-color: white;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    border-radius: 10px;
+    /* animation: contact linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+@keyframes contact {
+    
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    } */
+
+}
+
+.get_in_touch{
+    color: black;
+    padding: 30px 10px 10px 30%;
+    margin: 0 0 100px;
+    animation: get_in_touch_heading linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes get_in_touch_heading {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.get_in_touch p{
+    color: rgba(157, 155, 155, 0.922);
+    font-size: 14px;
+}
+
+.get_in_touch_form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 30px 30px 20px;
+    margin: 10px 0;
+    animation: get_in_touch linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes get_in_touch {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+   
+}
+
+.get_in_touch_form input,
+.get_in_touch_form textarea{
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(234, 234, 234);
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+.get_in_touch_form input{
+    height: 45px;
+}
+
+.get_in_touch_form textarea{
+    height: 130px;
+}
+
+.get_in_touch_form .send_contact{
+    margin: auto;
+    padding: 10px 30px;
+    background-color: rgb(255, 95, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contactUs_page{
+    color: white;
+    background-color: rgb(255, 95, 2);
+    width: 45%;
+    position: absolute;
+    border-radius: 10px;
+    top: 13%;
+    left: -22%;
+}
+
+.contactUs_page h3{
+    padding: 30px 0 5px 0;
+    width: 103px;
+    margin: auto;
+    font-size: 20px;
+    position: relative;
+    animation: get_in_touch_heading linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.contactUs_page h3::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    animation: underline_effect linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes underline_effect {
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    100%{
+        width: 45%;
+        opacity: 1;
+    }
+
+}
+
+.contact_details {
+    padding: 0 5% 8% 15%;
+}
+
+.contact_detail{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 28px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    animation: contact_us linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes contact_us {
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    
+    .contact_container{
+        width: 63%;
+    }
+    
+    
+    .contactUs_page{
+        /* width: 80%; */
+        /* height: 330px; */
+        width: 75%;
+        top: -17%;
+        left: 12%;
+
+    }
+
+    .contactUs_page h3{
+        padding: 20px 0 2px;
+    }
+
+    .contact_details {
+        padding: 0 30px;
+        margin: 0;
+    }
+
+    .get_in_touch{
+        margin: 150px 0 100px;
+        width: 100%;
+        padding: 190px 10px 10px;
+
+    }
+
+    .get_in_touch h1,
+    .get_in_touch p{
+        text-align: center;
+    }
+    
+    .get_in_touch_form{
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .contact_container {
+        width: 90%;
+    }
+}

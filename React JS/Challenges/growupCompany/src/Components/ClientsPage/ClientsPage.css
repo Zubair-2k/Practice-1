@@ -1,0 +1,131 @@
+.clientContainer{
+    color: black;
+    overflow: hidden;
+    background-image: url("poster3.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+    /* height: 95vh; */
+}
+
+.clientBgcolor{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(4, 14, 32, 0.58);
+}
+
+.clientContainer h2{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding: 35px 0 40px;
+}
+
+.clientLogos{
+    width: 100%;
+    white-space: nowrap;
+    margin: 0 0 40px;
+    padding: 30px 0;
+    animation: slideLogo 40s infinite linear;
+}
+
+@keyframes slideLogo {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.clientLogos .logo{
+    color: rgb(135, 134, 134);
+    height: 80px;
+    /* font-weight: 600; */
+    display: inline-block;
+    padding: 20px 33px;
+    margin: 0 20px;
+    font-size: 45px;
+}
+
+.logo:hover .clientLogos{
+    animation-play-state: paused;
+}
+
+.reviews{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0 50px;
+    margin: 60px 0;
+}
+
+.reviewCard{
+    max-width: 300px;
+    max-height: 500px;
+    padding: 20px;
+    overflow: hidden;
+    /* background-color: rgb(13 51 103); */
+    background-color: rgb(51, 71, 88);
+    border-radius: 5px;
+}
+
+.reviewProfile{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 50px;
+}
+
+.profileImg{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0, 140, 255);
+    border-radius: 50%;
+}
+
+.profileDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileName{
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.profileOccupation{
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.reviewContent{
+    font-size: 14px;
+    color: white;
+}
+
+.ratings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.ratings p{
+    color: yellow;
+    font-size: 20px;
+    margin: 0;
+}

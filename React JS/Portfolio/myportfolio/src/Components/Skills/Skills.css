@@ -1,0 +1,589 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skills{
+    min-height: 100vh;
+    /* user-select: none; */
+    animation: skills_page linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+@keyframes skills_page {
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+.skills_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 0px;
+    user-select: none;
+    
+}
+
+.skills_container .skills_heading{
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+    /* text-transform: uppercase; */
+}
+
+.skills_container .skills_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 30px;
+    margin: 30px 0px;
+
+}
+
+.skills_list .skill{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-transform: uppercase;
+    color: rgb(255, 109, 25);
+    border: 3px solid rgba(255, 255, 255, 0.142);
+    /* border-radius: 50%; */
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 11px 3px rgba(255, 255, 255, 0.39); */
+    box-shadow: 0px 0px 11px 3px rgba(255, 98, 0, 0.455);
+    position: relative;
+    transition: all .2s ease-in-out;
+    transform: scale(1);
+    animation: skill linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes skill {
+    
+    0%{
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    /* flex-basis: 20%; */
+    /* background-color: rgba(30, 30, 30, 0.508);*/
+    /* color: rgb(255, 109, 25); */
+    /* color: rgba(255, 255, 255, 0.842); */
+    /* border: 3px solid rgba(255, 255, 255, 0.142); */
+    /* border-radius: 8px; */
+    /* border-radius: 50px; */
+    /* box-shadow: 0px 0px 11px 3px rgb(251, 144, 67); */
+}
+
+.skill img{
+    width: 100px;
+    height: 100px;
+    /* border-radius: 20px;*/
+    border-radius: 50px;
+    scale: 1;
+    transition: all .2s linear;
+}
+
+.skill .ratings{
+    display: none;
+}
+
+.skill:hover{
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.842);
+    text-shadow: 0px 0px 10px white;
+    letter-spacing: 2px;
+    border: none;
+    box-shadow: none;
+    transform: scale(1.08);
+    cursor: pointer;
+}
+
+.html_rating,.css_rating,.sass_rating,.js_rating,.ts_rating,.react_rating,
+.node_rating,.tailwind_rating,.python_rating,.git_rating{
+    width: 200px;
+    /* height: 15px; */
+    height: 7px;
+    border: 1px solid orange;
+    border-radius: 10px;
+    background-color: black;
+    position: relative;
+    /* transition: all .2s linear; */
+}
+
+.skill:hover .html_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: html_percentage .2s ease-in ;
+}
+
+@keyframes html_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill:hover .css_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: css_percentage .2s ease-in ;
+}
+
+@keyframes css_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.skill:hover .sass_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: sass_percentage .2s ease-in ;
+}
+
+@keyframes sass_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+.skill:hover .js_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: js_percentage .2s ease-in ;
+}
+
+@keyframes js_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill:hover .ts_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: ts_percentage .2s ease-in ;
+}
+
+@keyframes ts_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill:hover .react_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: react_percentage .2s ease-in ;
+}
+
+@keyframes react_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 65%;
+    }
+}
+
+.skill:hover .node_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: node_percentage .2s ease-in ;
+}
+
+@keyframes node_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+.skill:hover .tailwind_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: tailwind_percentage .2s ease-in ;
+}
+
+@keyframes tailwind_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+
+.skill:hover .python_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: python_percentage .2s ease-in ;
+}
+
+@keyframes python_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill:hover .git_rating::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: orange;
+    border-radius: 10px 0px 0px 10px;
+    animation: git_percentage .2s ease-in ;
+}
+
+@keyframes git_percentage {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 40%;
+    }
+}
+
+.skill:hover img,.skill:hover .skill_type{
+    display: none;
+}
+
+.skill:hover .ratings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media  screen and (max-width:768px){
+
+    .skill .skill_type{
+        display: none;
+    }
+
+    .skill .ratings{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+    }
+
+    .skill .html_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: html_percentage .2s ease-in ;
+    }
+
+    @keyframes html_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 80%;
+        }
+    }
+
+    .skill .css_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: css_percentage .2s ease-in ;
+    }
+
+    @keyframes css_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 80%;
+        }
+    }
+
+    .skill .sass_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: sass_percentage .2s ease-in ;
+    }
+
+    @keyframes sass_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 40%;
+        }
+    }
+
+    .skill .js_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: js_percentage .2s ease-in ;
+    }
+
+    @keyframes js_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 70%;
+        }
+    }
+
+    .skill .ts_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: ts_percentage .2s ease-in ;
+    }
+
+    @keyframes ts_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 70%;
+        }
+    }
+
+    .skill .react_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 65%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: react_percentage .2s ease-in ;
+    }
+
+    @keyframes react_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 65%;
+        }
+    }
+
+    .skill .node_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: node_percentage .2s ease-in ;
+    }
+
+    @keyframes node_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 60%;
+        }
+    }
+
+    .skill .tailwind_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: tailwind_percentage .2s ease-in ;
+    }
+
+    @keyframes tailwind_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 60%;
+        }
+    }
+
+    .skill .python_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: python_percentage .2s ease-in ;
+    }
+
+    @keyframes python_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 70%;
+        }
+    }
+
+    .skill .git_rating::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: orange;
+        border-radius: 10px 0px 0px 10px;
+        animation: git_percentage .2s ease-in ;
+    }
+
+    @keyframes git_percentage {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 40%;
+        }
+    }
+
+    .ratings .percentage{
+        color: white;
+    }
+
+}
+
+

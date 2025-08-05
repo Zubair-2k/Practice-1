@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="todo_list">
+        <div class="todo_inputField_container">
+
+            <h1>Student Details</h1>
+
+            <div class="todo_inputField">
+                <label htmlfor="todo_name">Name : </label>
+                <input type="text" name="todo_name" class="todo_name"/>
+            </div>
+
+            <div class="todo_inputField">
+                <label for="todo_age">Age : </label>
+                <input type="number" name="todo_age" class="todo_age"/>
+            </div>
+
+            <div class="todo_inputField">
+                <label for="todo_email">Email : </label>
+                <input type="email" name="todo_email" class="todo_email"/>
+                <!-- <p class="email_error">This field require "@gmail.com"</p> -->
+            </div>
+
+            <div class="todo_inputField">
+                <label for="todo_phone">Mobile : </label>
+                <input type="tel" name="todo_phone" class="todo_phone"/>
+                <!-- <p class="phone_error">Please check the phone number</p> -->
+            </div>
+
+            <button class="add_btn" onclick="handleAdd()">Add</button>
+
+            <div class="edit_btn_container">
+                <button class="update_btn" onclick=handleUpdate()>Update</button>
+                <button class="cancel_btn" onclick=handleCancel()>Cancel</button>
+            </div>
+
+        </div>
+
+        <table class="todo_table">
+
+            <thead>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+
+            </thead>
+
+            <tbody class="todoList">
+
+                <tr>
+                    <td>Raja</td>
+                    <td>23</td>
+                    <td>raja@email.com</td>
+                    <td>6456377728</td>
+                    <td class="table_btn_container">
+                        <button class="edit_btn" onclick=handleEdit(event)>Edit</button>
+                        <button class="delete_btn" onclick=handleDelete(event)>Delete</button>
+                    </td>
+                </tr>
+
+            </tbody>
+                
+        </table>
+
+        <button class="clrTable" onclick="handleClearTable()">Clear Table</button>
+        
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

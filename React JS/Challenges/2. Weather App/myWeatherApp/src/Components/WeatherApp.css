@@ -1,0 +1,145 @@
+.weatherApp{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 157, 255);
+}
+
+.weatherAppContainer{
+    width: 60%;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+.searchCity{
+    width: 80%;
+    border: 2px solid rgb(97, 95, 95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.searchInput{
+    padding: 20px;
+    width: 87%;
+    border-radius: 50px 0 0 50px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: black;
+}
+
+.searchInput:focus{
+    outline: none;
+}
+
+.searchInput::placeholder{
+    font-weight: bold;
+}
+
+.searchIcon{
+    padding: 15px;
+}
+
+.searchDetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.noDataFound,.cityNotFound{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(184, 184, 184);
+    margin: 30px 0;
+}
+
+.searchValue{
+    margin: 40px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.tempValue{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cityName{
+    font-size: 34px;
+    font-weight: 900;
+    color: rgb(255, 196, 1);
+}
+
+.countryName{
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.latlong{
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.latDetails,.longDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.latHeading,.longHeading{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.latValue,.longValue{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+}
+
+.WindDetails{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}   
+
+.humidityDetails,.windSpeedDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.humidityHeading,.windSpeedHeading{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.humidityValue,.windSpeedValue{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(111, 111, 111);
+}

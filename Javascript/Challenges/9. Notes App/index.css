@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222438;
+    position: relative;
+}
+
+form{
+    background-color: white;
+    width: max-content;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.color{
+    width: 25px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.createBtn{
+    border: none;
+    background-color: transparent;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.color::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+
+.color::-webkit-color-swatch{
+    border-radius: 50%;
+}
+
+.heading{
+    color: white;
+    opacity: 0.3;
+    position: absolute;
+    top: 10px;
+    left: 45%;
+    letter-spacing: 5px;
+}
+
+.note textarea{
+    all: unset;
+    color: #d6d6d6;
+}
+
+.note textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.note textarea::placeholder{
+    letter-spacing: 3px;
+}
+
+.list .note{
+    background-color: #333;
+    width: max-content;
+    border-top: 30px solid #e6b905;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    user-select: none;
+    /* transition: all linear; */
+    /* overflow: hidden; */
+}
+
+.closeBtn{
+    position: absolute;
+    right: 10px;
+    bottom: 223px;
+    font-size: 19px;
+    color: rgb(78, 78, 78);
+    user-select: none;
+}
