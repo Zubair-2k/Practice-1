@@ -1,0 +1,94 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex: 1;
+}
+
+.img-container{
+    width: 50%;
+    height: 100%;
+    background-image: url("./img/Color-Car.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.input-container{
+    padding: 20px;
+    width: 50%;
+}
+
+.input-container h1{
+    color: rgb(0, 110, 255);
+    font-size: 30px;
+    text-align: center;
+}
+
+.input-container .invalid_output
+{
+    text-align: center;
+    color: red;
+    font-size: 12px;
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+input[type="text"]{
+    padding: 5px;
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    padding: 10px;
+    background-color: rgb(0, 140, 255);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+button:nth-of-type(2)
+{
+    background-color: red;
+}
+/* 
+.cancel{
+    background-color: red;
+} */
+
+.output-container{
+    border: 2px solid rgb(0, 140, 255);
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.output-container .bmi_output{
+    color: rgb(0, 140, 255);
+    font-weight: 500;
+}

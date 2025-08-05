@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 42, 211);
+}
+
+.container
+{
+    background-color: white;
+    border: 1px solid black;
+    padding: 30px;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    display: block;
+    border-top: 2px dashed grey;
+    border-bottom: 2px dashed grey;
+
+}
+
+.input-field{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input-field label{
+    margin-bottom: 10px;
+}
+
+.input-field input[type="number"],select{
+    padding: 10px;
+}
+
+.result
+{
+    font-weight: 500;
+    margin: 10px;
+    padding: 20px;
+    border: 2px dotted rgb(0, 106, 255);
+    text-align: center;
+    color: rgb(0, 106, 255);
+}
