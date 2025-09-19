@@ -1,7 +1,57 @@
-import React from 'react'
+import {useState} from 'react'
 import "./Contact.css"
 
 const Contact = () => {
+
+  const [message, setMessage] = useState({name:"",email:"",feedback:""});
+  const [emailStatus, setEmailStatus] = useState("");
+
+  const handleFormChange = (e)=>{
+    let {name,value} = e.target
+    setMessage({...message,[name]:value})
+
+    if (name === "email") {
+      if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(value)) {
+        setEmailStatus("Please enter a valid Email address");
+      } 
+      else {
+        setEmailStatus("");
+      }
+    }
+
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if(message.name === "" || message.email === "" || message.feedback === "") return;
+
+    const formData = new FormData(e.target);
+    console.log(formData)
+    console.log(message)
+
+    const response = await fetch(`https://formspree.io/f/${process.env.REACT_APP_FORM_ID}`, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    console.log(response)
+
+    if (response.ok) {
+      alert("Message sent successfully!");
+      setMessage({ name: "", email: "", message: "" }); // resets state
+      e.target.reset(); // clears uncontrolled inputs
+    } else {
+      alert("Oops! There was a problem.");
+    }
+
+    console.log(message)
+    console.log(formData)
+  };
+
   return (
     <>
       <section className='contact' id='contactPage'>
@@ -11,11 +61,36 @@ const Contact = () => {
                 <h1>Get in Touch</h1>
                 <p>Feel free to drop us a line below !</p>
                   
-                <form className="get_in_touch_form">
-                  <input type='text' name='name' placeholder='Your Name' autoComplete='true'/>
-                  <input type='email' name='email' placeholder='Your Email' autoComplete='true'/>
-                  <textarea name='message' placeholder='Typing your message here...'/>
-                  <button className='send_contact'>Send</button>
+                <form className="get_in_touch_form" onSubmit={handleSubmit}>
+                 
+                  <input type='text'
+                  name='name'
+                  placeholder='Your Name'
+                  value={message.name}
+                  onChange={handleFormChange}
+                  autoComplete='true'
+                  required/>
+
+                  <input 
+                  type='email' 
+                  name='email' 
+                  placeholder='Your Email'
+                  value={message.email}
+                  onChange={handleFormChange}
+                  autoComplete='true' 
+                  required/>
+
+                  {emailStatus && <p style={{color:"red"}}>{emailStatus}</p>}
+                  
+                  <textarea 
+                  name='feedback'
+                  placeholder='Typing your message here...' 
+                  value={message.feedback}
+                  onChange={handleFormChange}
+                  required/>
+                  
+                  {!emailStatus && <button className='send_contact'>Send</button>}
+                  
                 </form>
 
               </div>
@@ -25,22 +100,22 @@ const Contact = () => {
                   
                 <div className="contact_details">
                   <div className="contact_detail contact_address">
-                    <i>@</i>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, atque.</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Erode</p>
                   </div>
 
                   <div className="contact_detail contact_email">
-                    <i>$</i>
-                    <p>hello@email.com</p>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>zubairarif2k@gmail.com</p>
                   </div>
 
                   <div className="contact_detail contact_phone">
-                    <i>#</i>
-                    <p>+91 6372438452</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+91 6374232052</p>
                   </div>
 
                   <div className="contact_detail contact_github">
-                    <i>%</i>
+                    <i class="fa-brands fa-github"></i>
                     <p>www.github.com</p>
                   </div>
 
@@ -58,4 +133,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

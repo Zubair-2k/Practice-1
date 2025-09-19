@@ -70,7 +70,7 @@
     /* box-shadow: 0px 0px 11px 3px rgba(255, 255, 255, 0.39); */
     box-shadow: 0px 0px 11px 3px rgba(255, 98, 0, 0.455);
     position: relative;
-    transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
     transform: scale(1);
     animation: skill linear;
     animation-timeline: view();
@@ -143,7 +143,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: html_percentage .2s ease-in ;
+    animation: html_percentage .6s ease-in ;
 }
 
 @keyframes html_percentage {
@@ -164,7 +164,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: css_percentage .2s ease-in ;
+    animation: css_percentage .6s ease-in ;
 }
 
 @keyframes css_percentage {
@@ -185,7 +185,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: sass_percentage .2s ease-in ;
+    animation: sass_percentage .6s ease-in ;
 }
 
 @keyframes sass_percentage {
@@ -206,7 +206,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: js_percentage .2s ease-in ;
+    animation: js_percentage .6s ease-in ;
 }
 
 @keyframes js_percentage {
@@ -227,7 +227,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: ts_percentage .2s ease-in ;
+    animation: ts_percentage .6s ease-in ;
 }
 
 @keyframes ts_percentage {
@@ -248,7 +248,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: react_percentage .2s ease-in ;
+    animation: react_percentage .6s ease-in ;
 }
 
 @keyframes react_percentage {
@@ -269,7 +269,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: node_percentage .2s ease-in ;
+    animation: node_percentage .6s ease-in ;
 }
 
 @keyframes node_percentage {
@@ -290,7 +290,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: tailwind_percentage .2s ease-in ;
+    animation: tailwind_percentage .6s ease-in ;
 }
 
 @keyframes tailwind_percentage {
@@ -311,7 +311,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: python_percentage .2s ease-in ;
+    animation: python_percentage .6s ease-in ;
 }
 
 @keyframes python_percentage {
@@ -332,7 +332,7 @@
     height: 100%;
     background-color: orange;
     border-radius: 10px 0px 0px 10px;
-    animation: git_percentage .2s ease-in ;
+    animation: git_percentage .6s ease-in ;
 }
 
 @keyframes git_percentage {

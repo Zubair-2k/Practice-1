@@ -16,10 +16,12 @@ const About = () =>{
 
                 <h1 className="about_Heading">About Me</h1>
 
-                <p className="about_Context">Lorem ipsum dolor, sit amet consectetur adipisicing 
-                elit. Vel iusto adipisci laudantium suscipit sunt corrupti exercitationem assumenda distinctio? Ipsam rerum 
-                explicabo nulla numquam blanditiis voluptates nobis, cumque obcaecati quas temporibus possimus quibusdam illo quos ut? Veniam cupiditate deserunt 
-                et deleniti repudiandae suscipit, a reiciendis impedit mollitia ad sunt consequatur nesciunt!</p>
+                <p className="about_Context">
+                    Hi, I am a Front-End Developer who loves turning ideas into interactive digital experiences.
+                    For the past 2 years, I have been crafting clean and responsive applications using React.js and JavaScript.
+                    I enjoy matching colors, shaping layouts, and adding small animations that bring life to a project.
+                    For me, front-end development is the perfect mix of logic and creativity — I get to solve problems while also designing experiences that feel delightful to users.
+                </p>
 
                 <a href="#contactPage">
                     <button className="about_Contact_Btn">
